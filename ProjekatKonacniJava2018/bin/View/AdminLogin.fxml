@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="236.0" prefWidth="243.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AdminLoginController">
+   <children>
+      <AnchorPane prefHeight="240.0" prefWidth="247.0" style="-fx-background-color: #87887f;">
+         <children>
+            <VBox prefHeight="240.0" prefWidth="247.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="username" prefHeight="25.0" prefWidth="153.0" promptText="Korisničko ime">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <PasswordField fx:id="password" promptText="Lozinka">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin>
+                  </PasswordField>
+                  <Button fx:id="login" mnemonicParsing="false" onAction="#loginAction" style="-fx-background-color: #0f9bf4;" text="Prijavi se">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="40.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

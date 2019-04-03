@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DodajVoziloController">
+   <children>
+      <AnchorPane prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #87887f;">
+         <children>
+            <VBox layoutX="8.0" layoutY="24.0" prefHeight="387.0" prefWidth="179.0">
+               <children>
+                  <Label fx:id="nazivLabel" text="Naziv">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="brojSasijeLabel" text="Broj šasije">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="brojMotoraLabel" text="Broj motora">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="6.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="registarskiBrojLabel" text="Registarski broj">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="8.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="brojVrataLabel" text="Broj vrata">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="8.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="nosivostLabel" text="Nosivost">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="8.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="rotacijaLabel" text="Rotacija">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="3.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="izaberiFotografijuLabel" text="Izaberi fotografiju">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="3.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="fajlPotjeraLabel" text="Izaberi fajl za potjeru">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="73.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="187.0" layoutY="24.0" prefHeight="430.0" prefWidth="170.0">
+               <children>
+                  <TextField fx:id="naziv" />
+                  <TextField fx:id="brojSasije">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="brojMotora">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="registarskiBroj">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="brojVrata">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="nosivost">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <CheckBox fx:id="rotacija" alignment="BOTTOM_LEFT" mnemonicParsing="false">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <Button fx:id="izaberiFotografiju" mnemonicParsing="false" onAction="#izaberiFotografijuAction" style="-fx-background-color: #0f9bf4;" text="Izaberi">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <ImageView fx:id="imageView" fitHeight="74.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin></ImageView>
+                  <Button fx:id="potjeraFile" mnemonicParsing="false" onAction="#potjeraFileAction" style="-fx-background-color: #0f9bf4;" text="Izaberi" />
+                  <Button fx:id="dodajVozilo" mnemonicParsing="false" onAction="#dodajVoziloAction" style="-fx-background-color: #0f9bf4;" text="Dodaj vozilo">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin></Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

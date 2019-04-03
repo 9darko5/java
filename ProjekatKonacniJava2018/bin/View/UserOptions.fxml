@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.UserOptionsController">
+   <children>
+      <AnchorPane prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #87887f;">
+         <children>
+            <VBox layoutX="14.0" layoutY="14.0" prefHeight="235.0" prefWidth="290.0">
+               <children>
+                  <HBox prefHeight="23.0" prefWidth="230.0">
+                     <children>
+                        <Label text="Minimalan broj vozila">
+                           <HBox.margin>
+                              <Insets top="2.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="textField" prefHeight="25.0" prefWidth="111.0" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="pokreniSimulaciju" mnemonicParsing="false" onAction="#pokreniSimulacijuAction" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #0f9bf4;" text="Pokreni simulaciju">
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin></Button>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="platform" onAction="#izaberiPlatformuAction" prefHeight="25.0" prefWidth="111.0" promptText="Platforma" />
+                     </children>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </HBox>
+                  <Button fx:id="dodajUGarazu" mnemonicParsing="false" onAction="#dodajUGarazuAction" prefHeight="35.0" prefWidth="112.0" style="-fx-background-color: #0f9bf4;" text="Dodaj u garažu">
+                     <VBox.margin>
+                        <Insets top="80.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <Label fx:id="labela" layoutX="14.0" layoutY="256.0" />
+            <Button fx:id="zavrsiSimulacijuButton" layoutX="466.0" layoutY="402.0" mnemonicParsing="false" onAction="#zavrsiSimulacijuAction" style="-fx-background-color: #0f9bf4;" text="Završi simulaciju" />
+            <VBox fx:id="vb" layoutX="362.0" layoutY="14.0" prefHeight="200.0" prefWidth="224.0" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

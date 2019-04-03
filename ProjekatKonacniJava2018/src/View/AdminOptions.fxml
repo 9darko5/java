@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AdminOptionsController">
+   <children>
+      <AnchorPane prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #87887f;">
+         <children>
+            <HBox layoutX="181.0" layoutY="14.0" prefHeight="35.0" prefWidth="199.0">
+               <children>
+                  <Label text="Administrator options">
+                     <font>
+                        <Font name="MV Boli" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox layoutX="14.0" layoutY="51.0" prefHeight="185.0" prefWidth="255.0">
+               <children>
+                  <ComboBox fx:id="comboBoxNum" prefHeight="25.0" prefWidth="122.0" promptText="Broj platforme" style="-fx-background-color: #C9CBD0;" />
+                  <ComboBox fx:id="comboBox" prefHeight="34.0" prefWidth="155.0" promptText="Vrsta vozila" style="-fx-background-color: #C9CBD0;" visibleRowCount="5" />
+                  <Button fx:id="dodaj" mnemonicParsing="false" onAction="#dodajAction" style="-fx-background-color: #0f9bf4;" text="Dodaj">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <ComboBox fx:id="comboBoxNum1" prefWidth="150.0" promptText="Platforma za prikaz" style="-fx-background-color: #C9CBD0;">
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <Button fx:id="prikazi" mnemonicParsing="false" onAction="#prikaziAction" style="-fx-background-color: #0f9bf4;" text="Prikaži">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin></Button>
+               </children>
+               <padding>
+                  <Insets right="100.0" />
+               </padding>
+            </VBox>
+            <VBox layoutX="14.0" layoutY="236.0" prefHeight="200.0" prefWidth="572.0">
+               <children>
+                  <TableView fx:id="tabelaVozila" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="naziv" onEditCommit="#changeNazivCellEvent" prefWidth="111.0" text="Ime" />
+                      <TableColumn fx:id="brojSasije" onEditCommit="#changeBrojSasijeCellEvent" prefWidth="105.0" text="Broj šasije" />
+                        <TableColumn fx:id="brojMotora" onEditCommit="#changeBrojMotoraCellEvent" prefWidth="98.0" text="Broj motora" />
+                        <TableColumn fx:id="registarskiBroj" onEditCommit="#changeRegistarskiBrojCellEvent" prefWidth="122.0" text="Registarski broj" />
+                        <TableColumn fx:id="vrijemeUlaska" prefWidth="135.0" text="Vrijeme ulaska" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox layoutX="386.0" layoutY="37.0" prefHeight="200.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Button fx:id="korisnickaAplikacija" mnemonicParsing="false" onAction="#korisnickaAplikacijaAction" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #0f9bf4;" text="Korisnička aplikacija">
+                     <VBox.margin>
+                        <Insets left="60.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="obrisi" mnemonicParsing="false" onAction="#obrisiAction" prefHeight="25.0" prefWidth="62.0" style="-fx-background-color: #0f9bf4;" text="Obriši">
+                     <VBox.margin>
+                        <Insets left="145.0" top="127.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
